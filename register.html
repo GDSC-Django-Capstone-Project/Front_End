@@ -3,8 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <style>
+    body {
+      background-color: #e7f9e7;
+      margin: 0;
+      padding: 0;
+      font-family: "Playfair Display", serif;
+      font-optical-sizing: auto;
+      font-weight: 500;
+      font-style: normal;
+    }
+    #registration h1{
+        margin-top: 50px;
+        margin-bottom: 60px;
+        margin-left: 20px;
+        font-size:2.5rem ;
+        color: rgb(119, 35, 35);
+    }
+    .form{
+    display:flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-left: 20px;
+    }
+    .form input{
+    border-radius: 5px;
+    width:300px;
+    margin-top: 10px;
+    border-color: #3f583f;
+    }
+    .but3 button{
+    margin-top: 1rem;
+    padding: 5px 20px;
+    font-size: 1.2rem;
+    background-color: #2f6e2f;
+    color: #fff;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+    .but3 button:hover{
+        background-color: #53d253;
+    }
+    .form label{
+        font-weight: bold;
+        font-size: large;
+    }
+    </style>
     <title>Registration_Page</title>
 </head>
 <body>
@@ -24,7 +76,7 @@
             <div class="label"><label for="cpass">Confirm Password</label></div>
             <div><input type="password" name="confirm_password" id="cpass" required></div>
             <div><span id="password-error" style="color:red"></span></div>
-            <div class="butt3"><button onclick="redirectToStudentLoginPage()">Register</button></div>
+            <div class="but3"><button onclick="redirectToStudentLoginPage()">Register</button></div>
         </div>
     </div>
 </body>
