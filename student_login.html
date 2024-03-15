@@ -3,18 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <style>
+    body {
+      background-color: #e7f9e7;
+      margin: 0;
+      padding: 0;
+      font-family: "Playfair Display", serif;
+      font-optical-sizing: auto;
+      font-weight: 500;
+      font-style: normal;
+    }
+    #form{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 30px;
+    }
+   .page{
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    }
+    .page h1{
+        font-size: 3em;
+        color: #385638;
+    }
+   .form input{
+    margin-top: 0.6rem;
+    width:100%;
+   }
+   .label{
+    margin-top: 1rem;
+   }
+   .butt3 button{
+    margin-top: 1rem;
+    padding: 5px 15px;
+    font-size: 0.8rem;
+    background-color: #0e400e;
+    color: #fff;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+   }
+   .label label{
+    font-style: italic;
+    font-weight: 200;
+   }
+   .input{
+    border-radius: 5px;
+    width:300px;
+    margin-top: 10px;
+    border-color: #3f583f;
+   }
+   #reg{
+    font-size: 1rem;
+    font-style: none;
+   }
+   #reg a{
+    font-style: italic;
+    color:black;
+    text-decoration: none;
+   }
+   #reg a:hover{
+    font-style: italic;
+    color:blue;
+   }
+    </style>
     <title>Student_Login_Page</title>
 </head>
 <body>
-    <div class="form">
+    <div id="form">
         <div class="page"><h1>Login</h1></div>
         <form action="#">
             <div class="label"><label for="user_name">User Name</label></div>
-            <div><input type="text" name="pass" id="user_name"></div>
+            <div><input class="input" type="text" name="pass" id="user_name"></div>
             <div class="label"><label for="pass">Password</label></div>
-            <div><input type="password" name="pass" id="pass"></div>
-            <div class="butt3"><button onclick="redirectToStudentPage()">Login</button></div>
+            <div><input class="input" type="password" name="pass" id="pass"></div>
+            <div class="butt3"><a href="student.html"><button type="submit">Login</button></a></div>
         </form>
         <div id="reg"><h3>If you dont have an account <a href="register.html">Register</a></h3></div>
     </div>
