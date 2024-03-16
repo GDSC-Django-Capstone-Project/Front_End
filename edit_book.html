@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+           background-color: #e7f9e7;
+           margin: 0;
+           padding: 0;
+           font-family: "Playfair Display", serif;
+           font-optical-sizing: auto;
+           font-weight: 500;
+           font-style: normal;
+        }
+        #change h1{
+            margin:100px 30px;
+            font-style: italic;
+            font-size: 2.5rem;
+            color: rgb(88, 32, 32);
+        }
+        #change_books{
+            display: flex;
+            flex-direction: column;
+            row-gap: 50px;
+            margin-left: 30px;
+        }
+        #change_books input{
+            width:300px;
+            margin-left: 10px;
+            border-radius: 5px;
+            border-color: black;
+        }
+        #change_books select{
+            border-color: black;
+            border-radius: 5px;
+            width: 100px;
+        }
+        #form{
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+        }
+        #form label{
+            font-size: large;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+        #save{
+            display: flex;
+            column-gap: 80px;
+        }
+        #save button{
+            margin-bottom: 10px;
+            padding:5px 10px;
+            background-color: #39979a;
+            color: #fff;
+            font-family: "Lora", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            border-color: black;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #save button:hover{
+            background-color: #275c5f;
+        }
+        #delete{
+            background-color: rgb(192, 11, 11) !important;
+        }
+    </style>
+    <title>Book_Editing_page</title>
+</head>
+<body>
+    <div id="change">
+        <div><h1>Apply Changes</h1></div>
+    </div>
+    <div id="change_books">
+        <form action="post" id="form">
+            <div>
+                <label for="title">Title:</label>
+                <input type="text" name="title" id="title">
+            </div>
+            <div>
+                <label for="author">Author:</label>
+                <input type="text" name="author" id="author">
+            </div>
+            <div>
+                <label for="genre">Genre:</label>
+                <input type="text" name="genre" id="genre">
+            </div>
+            <div>
+                <label for="status">Status:</label>
+                <select name="status" id="status">
+                    <option value="available">Available</option>
+                    <option value="borrowed">Borrowed</option>
+                </select>
+            </div>
+        </form>
+        <div id="save">
+            <div><button type="submit">SAVE</button></div>
+            <div><a href="add_book.html"><button type="submit">Save and Add Another</button></a></div>
+            <div><a href="edit_book.html"><button type="submit"> Save and Edit</button></a></div>
+            <div><button type="button"  id="delete">Delete</button></div>
+        </div>
+    </div>
+</body>
+</html>
+</html>
