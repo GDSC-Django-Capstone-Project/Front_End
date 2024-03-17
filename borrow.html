@@ -18,7 +18,7 @@
         font-style: italic;
         margin: 100px 20px;
         font-size:2.5rem ;
-        color: rgb(79, 23, 23);
+        color: rgb(2, 126, 126);
     }
     #borrow_book {
         display: flex;
@@ -89,32 +89,38 @@
         display: flex;
         column-gap: 50px;
     }
+    #datalist{
+        margin-top: 10px;
+        border-color: #163e41;
+    }
+    #datalist input{
+        width:250px;
+        background-color: #e9edf0;
+        border-radius: 5px;
+        border-color:darkcyan;
+    }
+
     </style>
     <title>Book_Borrowing_Page</title>
 </head>
 <body>
     <div id="borrow_book">
         <div><h1>Add Borrowed Book</h1></div>
-        <form action="post"  id="add">
+        <form id="add" method="post" action="{% url 'borrow' book.id %}">
             <div class="book_user">
                 <label class="but" for="book">Book:</label>
-                <div >
-                    <select name="book" id="book">
-                        <option value="#">HarryPotter</option>
-                        <option value="#">Scarlet</option>
-                        <option value="#">Pride and Prejudice</option>
-                    </select>
+                <div id="datalist">
+                    <input list="book_list">
+                    <datalist id="book_list">
+                        <option value="Book1">
+                        <option value="Book2">
+                        <option value="Book3">
+                    </datalist>
                 </div>
             </div>
             <div class="book_user">
                 <label class="but" for="user">User:</label>
-                <div>
-                    <select name="user" id="user">
-                        <option value="#">User 1</option>
-                        <option value="#">User 2</option>
-                        <option value="#">User 3</option>
-                    </select>
-                </div>
+                {% csrf_token %}
             </div>
             <div>
                 <label for="date">Return date:</label>
