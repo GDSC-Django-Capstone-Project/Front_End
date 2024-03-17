@@ -49,31 +49,6 @@
             background-color: rgb(2, 76, 76);
         }
     </style>
-    <script>
-        document.getElementById('borrowBtn').addEventListener('click', function() {
-            var response = {
-                success: false,
-                message: "You cannot borrow more than 3 books."
-            };
-
-            if (response.success) {
-                showNotification('success', 'Book borrowed successfully!');
-            } else {
-                showNotification('danger', response.message);
-            }
-        });
-
-        function showNotification(type, message) {
-            var alertDiv = document.createElement('div');
-            alertDiv.classList.add('alert');
-            alertDiv.classList.add('alert-' + type);
-            alertDiv.setAttribute('role', 'alert');
-            alertDiv.textContent = message;
-
-            var container = document.querySelector('.container');
-            container.insertBefore(alertDiv, document.getElementById('borrowBtn'));
-        }
-    </script>
 </head>
 <body>
 <div id="borrowed">
@@ -93,7 +68,7 @@
         {% endfor %}
     </ul>
 </div>
-    <a href="{% url 'borrow' %}"  id="borrowBtn"><button>Borrow Book</button></a>
+    <a href="{% url 'borrow' %}"  ><button>Borrow Book</button></a>
 </div>
 </body>
 </html>
